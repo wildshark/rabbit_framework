@@ -29,7 +29,7 @@ The Rabbit framework is organized into the following directories:
 1. Clone the Rabbit framework repository from GitHub:
 
 ```bash
-git clone [https://github.com/wildshark/rabbit_framework.git](https://github.com/wildshark/rabbit_framework.git)
+git clone https://github.com/wildshark/rabbit_framework.git
 ```
 
 2. Place your project code within the Rabbit framework directory structure.
