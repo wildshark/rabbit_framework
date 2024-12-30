@@ -1,7 +1,5 @@
 <?php
 $sub = explode("-",$_REQUEST['submit']);
-//var_dump($sub);
-//exit;
 $act = $sub[0];
 $req = $sub[1];
 $url = [];

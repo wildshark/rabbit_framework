@@ -65,6 +65,45 @@ switch($page){
 
 This example shows how to route to the `dashboard.php` template file for the "dashboard" page and retrieves data using the `SusuModule` function.
 
+## Action Produceed (module.php)
+
+The `module.php` file handles action scripts produced by modules. Here's an example:
+
+```php
+$sub = explode("-",$_REQUEST['submit']);
+$act = $sub[0];
+$req = $sub[1];
+$url = [];
+$token = BNK;
+
+switch($act){
+
+    case"user":
+        if($req === "login"){           
+            $rp = $qry->login("login",$_POST);
+            if($rp == false){
+                $url['page'] = "login";
+            }else{    
+                setcookie("_user",$_POST['username']);
+                setcookie("uid",$rp['uid']);
+                $url['main'] = "dashboard";
+                $url['token']=$rp['bid'];
+            }
+        }elseif($req ==="registration"){
+            $user = $_POST['username'];
+            $pwd = $_POST['password'];
+            $post = $qry->registration($user,$pwd);
+        }elseif($req ==="reset"){
+            $email = $_POST['email'];
+            $post = $qry->registration($email);
+        }   
+    break;
+
+}
+
+header("location: ?".http_build_query($url));
+```
+
 ## Web Interface Development
 
 To create a web interface:
