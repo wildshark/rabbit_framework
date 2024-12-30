@@ -1,6 +1,4 @@
-Sure, here is a git readme for the Rabbit PHP framework:
 
-```
 # Rabbit PHP Framework
 
 Rabbit is a PHP framework designed to be easy to develop and deploy. It supports SOAP API communication.
@@ -88,5 +86,3 @@ To integrate Rabbit with a desktop application framework (e.g., Electron, Qt, Ja
 1. Start your web server (e.g., built-in server, Nginx, or Apache).
 2. Place your Rabbit framework directory in the web server's document root.
 3. Access your application in the web browser using the configured host and port (e.g., http://localhost:8000).
-```
-This readme provides a basic overview of the Rabbit PHP framework. Refer to the framework's documentation for more detailed instructions and examples.
