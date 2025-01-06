@@ -1,7 +1,7 @@
 
-# Rabbit PHP Framework
+# RabbitPHP Framework
 
-Rabbit is a PHP framework designed to be easy to develop and deploy. It supports SOAP API communication.
+RabbitPHP is a PHP framework designed to be easy to develop and deploy. It supports SOAP API communication.
 
 ## Framework Structure
 
@@ -13,7 +13,7 @@ The Rabbit framework is organized into the following directories:
     * `navgiate.php`: Handles routing to view pages.
     * `module.php`: Handles action scripts produced by modules.
     * `page.php`: Handles public pages.
-    * `rsource.php`: Handles JSON and CSV CRUD operations.
+    * `rsource.php`: handles CRUD (Create, Read, Update, Delete) operations on JSON data stored in the data/ directory. This provides a simple way to manage application data..
     * `temp.php`: Handles temporary files and folders.
     * `route.php`: Defines routing logic.
 * `modular/`: Stores and runs project modules as classes.
@@ -23,6 +23,9 @@ The Rabbit framework is organized into the following directories:
 * `view/`: Contains view pages or functions displayed on forms.
 * `index.php`: The main entry point of the application.
 * `error.log`: Stores system error logs.
+
+## Requirements
+
 
 ## Installation
 
@@ -114,14 +117,17 @@ To create a web interface:
 
 ## Desktop Application Integration
 
-To integrate Rabbit with a desktop application framework (e.g., Electron, Qt, JavaFX):
+To integrate RabbitPHP with a desktop application framework (e.g. [NativePHP](), cztomczak/phpdesktop, Qt, JavaFX):
 
 1. Develop your desktop application using your chosen framework.
-2. Implement logic to make SOAP requests to your Rabbit framework server.
+2. Implement logic to make SOAP requests to your RabbitPHP framework server.
 3. Handle responses from the server and update the desktop application's UI.
 
 ## Running the Application
 
 1. Start your web server (e.g., built-in server, Nginx, or Apache).
-2. Place your Rabbit framework directory in the web server's document root.
+2. Place your RabbitPHP framework directory in the web server's document root.
 3. Access your application in the web browser using the configured host and port (e.g., http://localhost:8000).
+
+
+## 

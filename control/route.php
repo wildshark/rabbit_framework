@@ -1,5 +1,5 @@
 <?php
-class carrot{
+class rabbit{
 
     public static function error_handler(){
     

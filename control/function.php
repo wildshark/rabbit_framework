@@ -1,6 +1,21 @@
 <?php
 
 //seesion
+function customErrorHandler($errno, $errstr, $errfile, $errline) {
+    $date = date("Y-m-d H:i:sa");
+    $errorMessage = "** [$date] Error #$errline **\n";
+    $errorMessage .= "Type: " . error_reporting() . " (" . $errno . ")\n";
+    $errorMessage .= "Message: " . $errstr . "\n";
+    $errorMessage .= "File: " . $errfile . "\n";
+    $errorMessage .= "Line: " . $errline . "\n\n";
+  
+    // Write error to file
+    if (!file_exists('error.txt')) touch('error.txt'); //create file if it doesn't exist.
+    file_put_contents("error.txt", $errorMessage, FILE_APPEND | LOCK_EX); // Use LOCK_EX for exclusive access
+  
+    // Optionally display a custom error message to the user
+    // echo "<p>An error occurred: " . $errstr . "</p>"; 
+}
 
 function get_greeting($username) {
     $current_time = date("H:i");
